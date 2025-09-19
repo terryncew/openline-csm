@@ -1,0 +1,10 @@
+{
+  "title": "Tuning Receipt",
+  "status": "OK",
+  "point": "Shadow → judge by Canon → (maybe) adopt style",
+  "because": ["seed"],
+  "but": "",
+  "so": "ready",
+  "metrics": { "coherence": { "band": "green" } },
+  "policy": { "use": "demo", "share": "yes", "train": "yes" }
+}

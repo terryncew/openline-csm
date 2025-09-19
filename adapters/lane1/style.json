@@ -1,0 +1,1 @@
+{ "forgiveness": 0.10, "smoothing": 0.20, "reflex_order": ["rollback","rules_first","retune"], "vkd_discount": 0.50 }

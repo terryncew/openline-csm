@@ -1,0 +1,33 @@
+<!doctype html><meta charset="utf-8">
+<title>OpenLine CSM — Canon · Coach · Students</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  body{font:16px/1.5 system-ui,-apple-system,Segoe UI,Helvetica,Arial;margin:28px;background:#fafafa;color:#111}
+  h1{margin:0 0 10px} .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .box{background:#fff;border:1px solid #eee;border-radius:12px;padding:14px}
+  .muted{color:#666}
+</style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/terryncew/openline-core@main/receipts-kit/openline-card.js"></script>
+
+<h1>OpenLine CSM — Canon · Coach · Students</h1>
+<p class="muted">Law is global. Style is local. Shadow → Tuning Receipt → Live.</p>
+
+<div class="grid">
+  <div class="box">
+    <h3 style="margin:0 0 6px">Canon (Law)</h3>
+    <openline-card mode="compact" src="./receipts/canon.json?v=1"></openline-card>
+    <div class="muted" style="font-size:12px">Budget & Bend invariants · Emergence benchmark</div>
+  </div>
+
+  <div class="box">
+    <h3 style="margin:0 0 6px">Tuning Receipt (latest)</h3>
+    <openline-card mode="compact" src="./receipts/tuning.json?v=1"></openline-card>
+    <div class="muted" style="font-size:12px">Shadow → judge by Canon → accept/reject</div>
+  </div>
+
+  <div class="box">
+    <h3 style="margin:0 0 6px">Latest</h3>
+    <openline-card mode="compact" src="./receipt.latest.json?v=1"></openline-card>
+    <div class="muted" style="font-size:12px">Mirrors the most recent action</div>
+  </div>
+</div>

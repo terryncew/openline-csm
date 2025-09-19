@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "budget": { "k": 1.0, "AMB": 1.00 },
+  "bend":   { "kappa_c": 0.70 },
+  "bands":  { "green_max_risk": 0.40, "yellow_max_risk": 0.70, "red_min_risk": 0.70 },
+  "hysteresis": { "min_dwell_steps": 3 },
+  "exception":  { "target_rate": 0.02, "must_expire_days": 7 },
+  "benchmark":  { "max_flap_index": 0.10, "max_false_green": 0.03, "target_recovery_halflife": 3 },
+  "constraints": { "monotone_risk": true, "no_threshold_edits_by_style": true },
+  "weights": { "w_recognition": 1.0, "w_alignment": 1.0, "lambda_flap": 0.5, "lambda_exception": 0.5 }
+}

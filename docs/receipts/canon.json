@@ -1,0 +1,14 @@
+{
+  "title": "Canon (Law)",
+  "status": "OK",
+  "point": "Publish fixed law for all students",
+  "because": [
+    "Budget: Ic ≤ k·AMB",
+    "Bend: kappa < kappa_c",
+    "Benchmarks: false-green ≤ 0.03, flap ≤ 0.10, recovery halflife ≤ 3, exceptions ≤ 2%"
+  ],
+  "but": "",
+  "so": "public, versioned",
+  "metrics": { "coherence": { "band": "green" } },
+  "policy": { "use": "demo", "share": "yes", "train": "no" }
+}

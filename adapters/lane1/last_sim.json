@@ -1,0 +1,4 @@
+{
+  "law": { "budget_ok": true, "bend_ok": true, "Ic": 0.55, "AMB": 1.0, "k": 1.0, "kappa": 0.58, "kappa_c": 0.70 },
+  "emergence": { "V": 0.214, "phi_star": 0.71, "recognition": 0.62, "alignment": 0.78, "false_green": 0.02, "flap_index": 0.08, "recovery_halflife": 3, "exception_rate": 0.01, "objective_J": 1.14 }
+}

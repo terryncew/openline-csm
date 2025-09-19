@@ -1,7 +1,7 @@
 # OpenLine CSM — Canon · Coach · Students (Receipts-Native)
 
 **What this is**
-A tiny, working “constraint surfer” with your Terrynce Curve built in.
+A tiny, working “constraint surfer” with a Terrynce Curve built in.
 - **Canon (law)**: Budget (Ic ≤ k·AMB), Bend (κ < κc), and a small Emergence benchmark.
 - **Coach (style)**: proposes tiny, bounded nudges per lane (forgiveness, smoothing, VKD, reflex order).
 - **Students**: any agent/model (a transparent simulator here).

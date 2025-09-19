@@ -1,0 +1,2 @@
+{ "title":"Seed","status":"OK","point":"Initialize page","because":["seed"],"but":"","so":"ready",
+  "metrics":{"coherence":{"band":"green"}},"policy":{"use":"demo","share":"yes","train":"no"} }

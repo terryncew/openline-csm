@@ -1,0 +1,2 @@
+{"incident":"tool success vs tests fail","recovery":"rollback; rules-first; adapter added","band_before":"red","band_after":"green"}
+{"incident":"long-tail data drift","recovery":"increase smoothing; keep VKD conservative","band_before":"yellow","band_after":"green"}

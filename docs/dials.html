@@ -1,0 +1,50 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Receipt Dials Viewer</title>
+<style>
+  body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:40px;color:#222}
+  .card{border:1px solid #ddd;border-radius:12px;padding:20px;max-width:640px}
+  .row{display:flex;gap:16px;margin-top:8px}
+  .chip{border-radius:10px;padding:8px 12px;background:#f6f6f6}
+  .muted{color:#666}
+</style>
+<div class="card">
+  <h3>Receipt</h3>
+  <p class="muted">Drop a <code>receipt.latest.json</code> here, or click:</p>
+  <input id="file" type="file" accept="application/json">
+  <div id="out"></div>
+</div>
+<script>
+function q(v){return typeof v==="number"?v:""}
+function decode_q8_signed(i){return (i/127.5)-1.0}
+function ui(obj){
+  const out = document.getElementById('out');
+  if(!obj){ out.innerHTML = "<p class=muted>No file loaded.</p>"; return; }
+  const status = ((obj.attrs||{}).status||"").toUpperCase();
+  const size = new Blob([JSON.stringify(obj)]).size;
+  let html = `<div class=row>
+    <div class=chip>Status: <b>${status||"?"}</b></div>
+    <div class=chip>Bytes: <b>${size}</b></div>
+    <div class=chip>Version: <b>${obj.receipt_version||"?"}</b></div>
+  </div>`;
+  const dials = (((obj.telem||{}).dials)||null);
+  if(!dials){ html += `<p class=muted>(green: no dials)</p>`; out.innerHTML = html; return; }
+  const g = decode_q8_signed(dials.dphi_dk_q8||128).toFixed(2);
+  const a = decode_q8_signed(dials.d2phi_dt2_q8||128).toFixed(2);
+  const fr = ((dials.fresh_ratio_q8||0)/255).toFixed(2);
+  html += `<h4>Dials</h4>
+  <div class=row>
+    <div class=chip>∂Φ*/∂κ: <b>${g}</b></div>
+    <div class=chip>d²Φ*/dt²: <b>${a}</b></div>
+    <div class=chip>freshness: <b>${fr}</b></div>
+  </div>
+  <p class=muted>${dials.description||""}</p>`;
+  out.innerHTML = html;
+}
+document.getElementById('file').addEventListener('change', e=>{
+  const f = e.target.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = ()=>{ try{ ui(JSON.parse(r.result)); }catch(e){ alert("Invalid JSON"); } };
+  r.readAsText(f);
+});
+</script>

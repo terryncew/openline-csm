@@ -1,2 +1,7 @@
-{ "title":"Seed","status":"OK","point":"Initialize page","because":["seed"],"but":"","so":"ready",
-  "metrics":{"coherence":{"band":"green"}},"policy":{"use":"demo","share":"yes","train":"no"} }
+"model": "demo-llm/csm",
+"precision": "fp16/fp16",
+"point": "Initialize page with a seeded, full receipt.",
+"because": "Uniform fields prevent blank UI rows.",
+"but": "Demo values; not lab-grade metrics.",
+"so": "Replace with live numbers when ready.",
+"k": 0.15, "dhol": 0.011, "fresh": 0.92

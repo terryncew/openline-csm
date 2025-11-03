@@ -1,7 +1,14 @@
-"model": "demo-llm/csm",
-"precision": "fp16/fp16",
-"point": "Initialize page with a seeded, full receipt.",
-"because": "Uniform fields prevent blank UI rows.",
-"but": "Demo values; not lab-grade metrics.",
-"so": "Replace with live numbers when ready.",
-"k": 0.15, "dhol": 0.011, "fresh": 0.92
+{
+  "receipt_version":"1.5-P",
+  "version":"OLR/1.5-P",
+  "attrs":{"ts":"2025-11-02T00:00:00Z","run_id":"csm-tuning","issuer":"did:web:terryncew.github.io","status":"green"},
+  "model":"csm-judge",
+  "issued":"2025-11-02T00:00:00Z",
+  "precision":"n/a",
+  "point":"Shadow → judge by Canon → (maybe) adopt style.",
+  "because":"Seed aligned with Canon on this pass.",
+  "but":"Style drift increases with long horizon.",
+  "so":"Lock Canon; re-check drift at N runs.",
+  "signals":{"kappa":0.18,"dhol":0.05,"phi_star":0.89},
+  "sig":""
+}
